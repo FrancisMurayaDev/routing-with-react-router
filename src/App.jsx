@@ -1,15 +1,20 @@
 import "./App.css";
 import { Fragment } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./assets/Pages/Home";
+import About from "./assets/Pages/About";
+import Contact from "./assets/Pages/Contact";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <Fragment>
+     <Header />
       <h1>Website Logo</h1>
       <Routes>
-        <Route path="/" element={<h1>This is the Home Page</h1>} />
-        <Route path="/about" element={<h1>This is the About Page</h1>} />
-        <Route path="/contact" element={<h1>This is the contacts page</h1>} />
+        <Route path="/" index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Fragment>
   );
